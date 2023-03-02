@@ -1,9 +1,9 @@
 import className from 'classnames/bind';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import App2 from '~/App2';
 
-import AppHeader from '~/components/Appheader/Appheader';
 import config from '~/config';
 import { hideSidebar, toggleShowSidebar } from '~/redux/showSlice';
 import style from './MenuList.module.scss';
@@ -46,8 +46,18 @@ function MenuList({ vertical, className }) {
                     contact
                 </NavLink>
             </li>
-            <AppHeader/>
-            </ul>
+
+            <li>
+                <NavLink
+                    onClick={handleClickMenuItem}
+                    className={(nav) => cx('menu-link', { active: nav.isActive })}
+                    to={config.router.login}
+                >
+                    login
+                </NavLink>
+            </li>
+        </ul>
+
         // </div>
     );
 }

@@ -1,8 +1,7 @@
-import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import Profile from './components/Profile/Profile';
-import SocialCards from './components/SocialCards/SocialCards';
 import { getToken } from './helpers';
+import Profile from './layouts/components/Profile/Profile';
+import SocialCards from './layouts/components/SocialCards/SocialCards';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
 

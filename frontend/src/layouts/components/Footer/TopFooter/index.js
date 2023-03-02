@@ -112,7 +112,7 @@ export default function TopFooter() {
                                                 className={cx('widget__link')}
                                                 to={config.router.home}
                                             >
-                                                Sign In
+                                                Sign In = '/index2.jsx'
                                             </Link>
                                         </li>
                                         <li className={cx('widget__item')}>

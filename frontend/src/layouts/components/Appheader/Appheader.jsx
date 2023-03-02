@@ -1,9 +1,9 @@
 import { Button, Space } from 'antd';
-import React from 'react';
 import { CgWebsite } from 'react-icons/cg';
 import { useNavigate } from 'react-router-dom';
-import { useAuthContext } from '../../context/AuthContext';
-import { removeToken } from '../../helpers';
+import { useAuthContext } from '~/context/AuthContext';
+import { removeToken } from '~/helpers';
+import React from 'react';
 
 function AppHeader() {
     const { user, setUser } = useAuthContext();
@@ -17,8 +17,8 @@ function AppHeader() {
 
     return (
         <Space className="header_space">
-            <Button className="header_space_brand" href="/" type="link">
-                <CgWebsite size={1} />
+            <Button className="header_space_brand" href="/src/index.js" type="link">
+                <CgWebsite size={64} />
             </Button>
             <Space className="auth_buttons">
                 {user ? (
