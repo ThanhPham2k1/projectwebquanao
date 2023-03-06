@@ -12,12 +12,12 @@ function AppHeader() {
     const handleLogout = () => {
         removeToken();
         setUser(undefined);
-        navigate('/signin', { replace: true });
+        navigate('/profile', { replace: true });
     };
 
     return (
         <Space className="header_space">
-            <Button className="header_space_brand" href="/src/index.js" type="link">
+            <Button className="header_space_brand" href="/home" type="link">
                 <CgWebsite size={64} />
             </Button>
             <Space className="auth_buttons">

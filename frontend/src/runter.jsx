@@ -11,7 +11,7 @@ const AppRoutes = () => {
             <Route path="/" element={<SocialCards />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
-            <Route path="/profile" element={getToken() ? <Profile /> : <Navigate to="/signin" />} />
+            <Route path="/" element={getToken() ? <Profile /> : <Navigate to="/signin" />} />
         </Routes>
     );
 };

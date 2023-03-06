@@ -5,6 +5,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import AuthProvider from './layouts/components/AuthProvider/AuthProvider';
 import store from './redux/store';
 import App2 from './App2';
 
@@ -13,8 +14,10 @@ root.render(
     <React.StrictMode>
         <BrowserRouter>
             <Provider store={store}>
-                <App />
-                <App2 />
+                <AuthProvider>
+                    <App />
+                    <App2 />
+                </AuthProvider>
             </Provider>
         </BrowserRouter>
     </React.StrictMode>,
